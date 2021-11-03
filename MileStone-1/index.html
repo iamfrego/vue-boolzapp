@@ -1,19 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
 
-    <div id="app">
-        
-    </div>
+        <div id="app">
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="./assets/js/main.js"></script>
-</body>
+            <!-- background-color -->
+            <header>
+                <div class="top_green"></div>
+                <div class="back_gray"></div>
+            </header>
+
+            <main>
+                <div class="container">
+                    <div class="user_navbar">
+                        <!-- A-side SOLO utente -->
+                        <div class="myInfo">
+                            <div class="user">
+                                <div class="avatar">
+                                    <img class="avatar__image"
+                                        src="./assets/img/avatar_1.jpg" />
+                                </div>
+                                <div class="username">
+                                    <p>Matteo Fregonese</p>
+                                </div>
+                            </div>
+                            <div class="user_icon">
+                                <i class="fas fa-circle-notch"></i>
+                                <i class="fas fa-comment-alt"></i>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                        <!-- Nav chat Selected -->
+                        <div class="selected_chat">
+                            <div class="user">
+                                <div class="avatar">
+                                    <img class="avatar__image"
+                                    src="./assets/img/avatar_2.jpg" />
+                                </div>
+                                <div class="selected_chat_user">
+                                    
+                                    <div class="username">
+                                        <p>Michele</p>
+                                    </div>
+                                    <div class="last_seen">
+                                        <p>Ultimo accesso oggi alle</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="user_icon">
+                                <i class="fas fa-search"></i>
+                                <i class="fas fa-paperclip"></i>
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+            </main>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script src="./assets/js/main.js"></script>
+    </body>
 </html>

@@ -117,7 +117,6 @@ var app = new Vue({
             this.messageText = ""
             console.log(this.contacts[this.activeContact].messages);
 
-
             setTimeout(function () {
                 app.newMessageReceived.date = nowTime;
                 app.newMessageReceived.text = "Ok";

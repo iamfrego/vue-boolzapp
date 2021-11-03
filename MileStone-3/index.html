@@ -84,7 +84,9 @@
                             <!-- chat list -->
                             <div class="chat_list">
                                 <div v-for="(contact, i) in contacts">
+                                    <!-- chat list item -->
                                     <div class="chat" @click="showChat(i)">
+                                        <!-- chat list user -->
                                         <div class="user">
                                             <div class="avatar">
                                                 <img class="avatar__image"
@@ -98,14 +100,16 @@
                                 </div>
                             </div>
                         </aside>
+
+                        <!-- CHAT -->
                         <div class="chat_content">
                             <div class="message_container">
+                                <!-- message -->
                                 <div class="message clearfix" v-for="(message,i)
                                     in contacts[activeContact].messages">
                                     <div class="message_content" :class="message.status">
                                         <span>{{message.text}}</span> 
                                         <span class="date">{{message.date}}</span>
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +127,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </section>
                 </div>
 

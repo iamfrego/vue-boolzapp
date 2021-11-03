@@ -47,15 +47,15 @@
                             <div class="user">
                                 <div class="avatar">
                                     <img class="avatar__image"
-                                        src="./assets/img/avatar_2.jpg" />
+                                        :src="contacts[activeContact].avatar" />
                                 </div>
                                 <div class="selected_chat_user">
 
                                     <div class="username">
-                                        <p>Michele</p>
+                                        <p>{{contacts[activeContact].name}}</p>
                                     </div>
                                     <div class="last_seen">
-                                        <p>Ultimo accesso oggi alle</p>
+                                        <p>Ultimo accesso oggi alle </p>
                                     </div>
                                 </div>
                             </div>
@@ -87,34 +87,38 @@
                                 <div class="icon">
                                     <i class="fas fa-search"></i>
                                 </div>
-                                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                                <input type="text" placeholder="Cerca o inizia
+                                    una nuova chat">
                             </div>
 
                             <!-- chat list -->
                             <div class="chat_list">
-                                <div v-for = "contact in contacts">
-                                    <div class="chat" @click="showMessage">
-                                    <div class="user">
-                                        <div class="avatar">
-                                            <img class="avatar__image"
-                                                :src="contact.avatar">
-                                        </div>
-                                        <div class="username">
-                                            <p>{{contact.name}}</p>
+                                <div v-for="(contact, i) in contacts">
+                                    <div class="chat" @click="showChat(i)">
+                                        <div class="user">
+                                            <div class="avatar">
+                                                <img class="avatar__image"
+                                                    :src="contact.avatar">
+                                            </div>
+                                            <div class="username">
+                                                <p>{{contact.name}}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </aside>
 
                         <div class="chat_content">
 
-                            <!-- <div v-for="(message,i) in contacts.messages" :id="messages.status" class="message_container">
-                                <p>{{message.text}}</p>
-                            </div> -->
+                            <div class="message_container">
+                                <div class="message clearfix" v-for="(message,i) in
+                                        contacts[activeContact].messages">
+                                    <p :class="message.status">{{message.text}}</p>
+                                </div>
 
-                            <div class="message_container"></div>
+                            </div>
+
 
                             <div class="writeMessage">
                                 <div class="icon iconMessage">
@@ -123,7 +127,7 @@
                                 <div class="inputMessage">
                                     <input type="text">
                                 </div>
-                                 <div class="icon iconMessage">
+                                <div class="icon iconMessage">
                                     <i class="fas fa-microphone"></i>
                                 </div>
                             </div>

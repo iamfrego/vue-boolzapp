@@ -189,3 +189,25 @@ aside {
 input:focus-visible {
     outline: none;
 }
+
+.message {
+    margin: 2rem 0rem;
+}
+
+.sent {
+    float: right;
+    width: max-content;
+    border-radius: 0.5rem;
+    background-color: #D5F9BA;
+    padding: 10px;
+    margin-right: 40px;
+}
+
+.received {
+    float: left;
+    width: max-content;
+    border-radius: 0.5rem;
+    background-color: white;
+    padding: 10px;
+    margin-left: 40px;
+}

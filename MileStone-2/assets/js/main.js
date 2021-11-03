@@ -1,6 +1,7 @@
 var app = new Vue({
     el: '#app',
     data: {
+        activeContact: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -89,8 +90,9 @@ var app = new Vue({
         ]
     },
     methods: {
-        showMessage() {
-            console.log(click);
+        showChat(i) {
+            console.log("prova");
+            this.activeContact = i;
         }
     }
 

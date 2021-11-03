@@ -26,7 +26,6 @@
     top: 30px;
     left: 350px;
     width: 1420px;
-    height: 900px;
     z-index: 10;
 }
 
@@ -34,13 +33,17 @@
     height: 100px;
     background-color: #EAEAEA;
     display: flex;
+    justify-content: space-between;
 }
 
 .myInfo, .user, .selected_chat {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     height: 100px;
+}
+
+.myInfo, .selected_chat {
+    justify-content: space-between;
 }
 
 .myInfo {
@@ -126,4 +129,15 @@ aside {
     width: 90%;
     height: 100%;
     border: none;
+}
+
+.chat_list {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.chat {
+    width: 100%;
+    border-bottom: 1px #eaeaea solid;
 }

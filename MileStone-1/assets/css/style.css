@@ -60,16 +60,44 @@
     font-size: 20px;
 }
 
-.user_icon {
+.icon {
     color: #B1B1B1;
-    font-size: 20px;
+    font-size: 25px;
     margin-right: 1rem;
 }
 
-.user_icon i {
+.icon i {
     margin: 0rem 0.3rem;
 }
 
 .selected_chat {
     width: 65%;
+}
+
+aside {
+    width: 35%;
+    border-right: 1px #B1B1B1 solid;
+}
+
+.notify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #8EDAFC;
+    padding: 1rem 0rem;
+}
+
+.icon_bell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    background-color: white;
+}
+
+.bell {
+    color: #8EDAFC;
 }

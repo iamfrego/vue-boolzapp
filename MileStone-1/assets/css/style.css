@@ -4,6 +4,12 @@
     margin: 0;
 }
 
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
 .top_green {
     background-color: #009688;
     height: 130px;
@@ -39,7 +45,7 @@
 
 .myInfo {
     border-right: 1px #B1B1B1 solid;
-    width: 35%;
+    width: 30%;
 }
 
 .avatar {
@@ -75,7 +81,7 @@
 }
 
 aside {
-    width: 35%;
+    width: 30%;
     border-right: 1px #B1B1B1 solid;
 }
 
@@ -93,11 +99,31 @@ aside {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    height: 80px;
-    width: 80px;
+    height: 50px;
+    width: 50px;
     background-color: white;
 }
 
 .bell {
     color: #8EDAFC;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 10px #EAEAEA solid;
+}
+
+.search i {
+    width: 10%;
+    font-size: medium;
+    margin-left: 1rem;
+}
+
+.search input {
+    width: 90%;
+    height: 100%;
+    border: none;
 }

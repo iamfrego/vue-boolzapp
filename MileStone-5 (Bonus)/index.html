@@ -76,8 +76,7 @@
                                 </div>
                                 <div class="notify_text">
                                     <h3>Ricevi notifiche di nuovi messaggi</h3>
-                                    <p style="text-decoration: underline;">Attiva
-                                        notifiche desktop</p>
+                                    <p style="text-decoration: underline;">Attiva notifiche desktop</p>
                                 </div>
                             </div>
                             <!-- search -->
@@ -90,7 +89,6 @@
                             </div>
                             <!-- chat list -->
                             <div class="chat_list">
-
                                 <!-- chat list item -->
                                 <div class="chat" v-for="(contact, i) in
                                     contacts" @click="showChat(i)"
@@ -117,8 +115,13 @@
                                     in contacts[activeContact].messages">
                                     <div class="message_content"
                                         :class="message.status">
-                                        <span>{{message.text}} <span class="deleteMessage">
-                                            <i class="fas fa-chevron-down"></i></span>
+                                        <div class="messageInfo_Delete" :class="message.status + 'Info'" >
+                                            <div>Message info</div>
+                                            <div @click = "deleteMessage">Delete message</div>
+                                        </div>
+                                        <span>{{message.text}} <span
+                                                class="deleteMessage">
+                                                <i class="fas fa-chevron-down"></i></span>
                                         </span>
                                         <span class="date">{{message.date}}</span>
                                     </div>

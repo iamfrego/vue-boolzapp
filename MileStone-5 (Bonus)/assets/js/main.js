@@ -108,7 +108,6 @@ var app = new Vue({
     },
     methods: {
         showChat(i) {
-            console.log("prova");
             this.activeContact = i;
         },
         addMessage() {
@@ -126,6 +125,9 @@ var app = new Vue({
             }, 1000)
         },
         searchContact() {
+        },
+        deleteMessage(i) {
+            this.contacts[this.activeContact].messages.splice(i, 1)
         }
     }
 

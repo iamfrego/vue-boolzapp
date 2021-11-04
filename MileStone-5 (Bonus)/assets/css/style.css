@@ -199,10 +199,13 @@ input:focus-visible {
 
 .message {
     margin: 2rem 0rem;
+    position: relative;
 }
 
-.deleteMessage {
-    display: none;
+.deleteMessage i {
+    color: #b1b1b1;
+    font-size: medium;
+    margin-left: 1rem;
 }
 
 .message_content {
@@ -234,6 +237,29 @@ input:focus-visible {
     padding: 10px;
 }
 
-.message :hover .deleteMessage {
-    display: inline-block;
+.messageInfo_Delete {
+    padding: 1rem;
+    box-shadow: 1px 1px 0px black;
+    background-color: white;
+    width: max-content;
+    position: absolute;
+    display: none;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.sentInfo, .receivedInfo {
+    top: 40px;
+}
+
+.sentInfo {
+    right: 55px;
+}
+
+.receivedInfo {
+    left: 30%;
+}
+
+.message:hover .messageInfo_Delete {
+    display: block;
 }

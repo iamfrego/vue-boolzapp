@@ -72,6 +72,7 @@ body {
 
 .username p {
     font-size: 20px;
+    display: block;
 }
 
 .icon {
@@ -250,14 +251,11 @@ input:focus-visible {
 
 .sentInfo, .receivedInfo {
     top: 40px;
-}
-
-.sentInfo {
     right: 0px;
 }
 
-.receivedInfo {
-    right: 0px;
+.lastMessageData, .lastMessageText {
+    display: block;
 }
 
 .message:hover .messageInfo_Delete {

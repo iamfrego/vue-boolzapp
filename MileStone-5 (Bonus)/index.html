@@ -76,7 +76,8 @@
                                 </div>
                                 <div class="notify_text">
                                     <h3>Ricevi notifiche di nuovi messaggi</h3>
-                                    <p style="text-decoration: underline;">Attiva notifiche desktop</p>
+                                    <p style="text-decoration: underline;">Attiva
+                                        notifiche desktop</p>
                                 </div>
                             </div>
                             <!-- search -->
@@ -84,7 +85,8 @@
                                 <div class="icon">
                                     <i class="fas fa-search"></i>
                                 </div>
-                                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchInput"
+                                <input type="text" placeholder="Cerca o inizia
+                                    una nuova chat" v-model="searchInput"
                                     @keyup="searchContact">
                             </div>
                             <!-- chat list -->
@@ -101,6 +103,16 @@
                                         </div>
                                         <div class="username">
                                             <p>{{contact.name}}</p>
+                                            <div v-if="contact.messages.length>
+                                                0" class="text_message
+                                                by_contact">
+                                                {{contact.messages[contact.messages.length-1].text}}
+                                            </div>
+                                            <div v-if="contact.messages.length>
+                                                0" class="data_message
+                                                by_contact">
+                                                {{contact.messages[contact.messages.length-1].date}}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -115,9 +127,11 @@
                                     in contacts[activeContact].messages">
                                     <div class="message_content"
                                         :class="message.status">
-                                        <div class="messageInfo_Delete" :class="message.status + 'Info'" >
+                                        <div class="messageInfo_Delete"
+                                            :class="message.status + 'Info'">
                                             <div>Message info</div>
-                                            <div @click = "deleteMessage(i)">Delete message</div>
+                                            <div @click="deleteMessage(i)">Delete
+                                                message</div>
                                         </div>
                                         <span>{{message.text}} <span
                                                 class="deleteMessage">

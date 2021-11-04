@@ -1,4 +1,4 @@
-var app = new Vue({
+const app = new Vue({
     el: '#app',
     data: {
         activeContact: 0,
@@ -130,5 +130,4 @@ var app = new Vue({
             this.contacts[this.activeContact].messages.splice(i, 1)
         }
     }
-
 })

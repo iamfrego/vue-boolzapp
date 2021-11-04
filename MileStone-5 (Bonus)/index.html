@@ -117,7 +117,7 @@
                                         :class="message.status">
                                         <div class="messageInfo_Delete" :class="message.status + 'Info'" >
                                             <div>Message info</div>
-                                            <div @click = "deleteMessage">Delete message</div>
+                                            <div @click = "deleteMessage(i)">Delete message</div>
                                         </div>
                                         <span>{{message.text}} <span
                                                 class="deleteMessage">

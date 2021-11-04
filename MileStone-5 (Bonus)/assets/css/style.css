@@ -199,7 +199,6 @@ input:focus-visible {
 
 .message {
     margin: 2rem 0rem;
-    position: relative;
 }
 
 .deleteMessage i {
@@ -212,6 +211,7 @@ input:focus-visible {
     font-size: larger;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .date {
@@ -253,11 +253,11 @@ input:focus-visible {
 }
 
 .sentInfo {
-    right: 55px;
+    right: 0px;
 }
 
 .receivedInfo {
-    left: 30%;
+    right: 0px;
 }
 
 .message:hover .messageInfo_Delete {

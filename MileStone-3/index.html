@@ -79,14 +79,13 @@
                                 <div class="icon">
                                     <i class="fas fa-search"></i>
                                 </div>
-                                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchInput"
-                                    @keyup="searchContact">
+                                <input type="text" placeholder="Cerca o inizia una nuova chat">
                             </div>
                             <!-- chat list -->
                             <div class="chat_list">
 
                                 <!-- chat list item -->
-                                <div class="chat" v-for="(contact, i) in contacts" @click="showChat(i)" v-if="contact.name.toLowerCase().includes(searchInput)">
+                                <div class="chat" v-for="(contact, i) in contacts" @click="showChat(i)">
                                     <!-- chat list user -->
                                     <div class="user">
                                         <div class="avatar">

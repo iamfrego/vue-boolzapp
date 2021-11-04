@@ -79,25 +79,26 @@
                                 <div class="icon">
                                     <i class="fas fa-search"></i>
                                 </div>
-                                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchInput"
+                                    @keyup="searchContact">
                             </div>
                             <!-- chat list -->
                             <div class="chat_list">
-                                <div v-for="(contact, i) in contacts">
-                                    <!-- chat list item -->
-                                    <div class="chat" @click="showChat(i)">
-                                        <!-- chat list user -->
-                                        <div class="user">
-                                            <div class="avatar">
-                                                <img class="avatar__image"
-                                                    :src="contact.avatar">
-                                            </div>
-                                            <div class="username">
-                                                <p>{{contact.name}}</p>
-                                            </div>
+
+                                <!-- chat list item -->
+                                <div class="chat" v-for="(contact, i) in contacts" @click="showChat(i)" v-if="contact.name.toLowerCase().includes(searchInput)">
+                                    <!-- chat list user -->
+                                    <div class="user">
+                                        <div class="avatar">
+                                            <img class="avatar__image"
+                                                :src="contact.avatar">
+                                        </div>
+                                        <div class="username">
+                                            <p>{{contact.name}}</p>
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </aside>
 
@@ -107,8 +108,9 @@
                                 <!-- message -->
                                 <div class="message clearfix" v-for="(message,i)
                                     in contacts[activeContact].messages">
-                                    <div class="message_content" :class="message.status">
-                                        <span>{{message.text}}</span> 
+                                    <div class="message_content"
+                                        :class="message.status">
+                                        <span>{{message.text}}</span>
                                         <span class="date">{{message.date}}</span>
                                     </div>
                                 </div>

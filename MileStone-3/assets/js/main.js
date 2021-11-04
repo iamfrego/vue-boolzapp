@@ -5,6 +5,8 @@ var app = new Vue({
 
         messageText: "",
 
+        searchInput: "",
+
         newMessage: {
             date: '',
             text: '',
@@ -122,6 +124,8 @@ var app = new Vue({
                 app.newMessageReceived.text = "Ok";
                 app.contacts[app.activeContact].messages.push(app.newMessageReceived)
             }, 1000)
+        },
+        searchContact() {
         }
     }
 

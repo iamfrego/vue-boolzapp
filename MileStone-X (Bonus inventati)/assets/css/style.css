@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Courgette', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.top_green {
+    background-color: #009688;
+    height: 130px;
+}
+
+.back_gray {
+    background-color: #D7DBD6;
+    height: calc(100vh - 130px);
+}
+
+.container {
+    position: absolute;
+    background-color: white;
+    top: 30px;
+    left: 20%;
+    width: 1420px;
+    z-index: 10;
+}
+
+.user_navbar {
+    height: 100px;
+    background-color: #EAEAEA;
+    display: flex;
+    justify-content: space-between;
+}
+
+.myInfo, .user, .selected_chat {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.myInfo, .selected_chat {
+    justify-content: space-between;
+}
+
+.myInfo {
+    border-right: 1px #B1B1B1 solid;
+    width: 30%;
+}
+
+.avatar {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.avatar__image {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.username p {
+    font-size: 20px;
+    display: block;
+}
+
+.icon {
+    color: #B1B1B1;
+    font-size: 25px;
+    margin-right: 1rem;
+}
+
+.icon i {
+    margin: 0rem 0.3rem;
+    cursor: pointer;
+}
+
+.selected_chat {
+    width: 70%;
+}
+
+.main_container {
+    display: flex;
+}
+
+aside {
+    width: 30%;
+    border-right: 1px #B1B1B1 solid;
+}
+
+.notify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #8EDAFC;
+    padding: 1rem 0rem;
+}
+
+.icon_bell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+
+.bell {
+    color: #8EDAFC;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 10px #EAEAEA solid;
+}
+
+.search i {
+    width: 10%;
+    font-size: medium;
+    margin-left: 1rem;
+}
+
+.search input {
+    width: 90%;
+    height: 100%;
+    border: none;
+}
+
+.chat_list {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.chat {
+    width: 100%;
+    border-bottom: 1px #eaeaea solid;
+}
+
+.chat_content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.message_container {
+    background-image: url("../../assets/img/mine.jpg");
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.writeMessage {
+    display: flex;
+    border: 10px #F3EEEA solid;
+    height: 75px;
+}
+
+.iconMessage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6B7376;
+    background-color: #F3EEEA;
+    width: 5%;
+    height: 100%;
+    margin: 0;
+}
+
+.inputMessage {
+    display: flex;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.inputMessage input {
+    width: 100%;
+    border: none;
+    padding-left: 1rem;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+.message {
+    margin: 2rem 0rem;
+}
+
+.deleteMessage i {
+    color: #b1b1b1;
+    font-size: medium;
+    margin-left: 1rem;
+}
+
+.message_content {
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.date {
+    font-size: 15px;
+    text-align: end;
+}
+
+.sent {
+    float: right;
+    background-color: #D5F9BA;
+    margin-right: 40px;
+}
+
+.received {
+    float: left;
+    background-color: white;
+    margin-left: 40px;
+}
+
+.sent, .received {
+    width: max-content;
+    border-radius: 0.5rem;
+    padding: 10px;
+}
+
+.messageInfo_Delete {
+    padding: 1rem;
+    box-shadow: 1px 1px 0px black;
+    background-color: white;
+    width: max-content;
+    position: absolute;
+    display: none;
+    z-index: 3;
+    cursor: pointer;
+    top: 40px;
+    right: 0px;
+}
+
+.lastMessageData, .lastMessageText {
+    display: block;
+}
+
+.attached {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    height: 350px;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 10;
+    top: 101px;
+    left: 84%;
+    visibility: hidden;
+}
+
+.attached img {
+    width: 75px;
+}
+
+.paperclip:hover .attached {
+    visibility: visible;
+}
+
+.active {
+    display: block;
+}

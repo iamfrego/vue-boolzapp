@@ -265,7 +265,7 @@ input:focus-visible {
     position: absolute;
     z-index: 10;
     top: 101px;
-    left: 84%;
+    left: 94%;
     visibility: hidden;
 }
 
@@ -273,7 +273,7 @@ input:focus-visible {
     width: 75px;
 }
 
-.paperclip:hover .attached {
+.show_attached {
     visibility: visible;
 }
 

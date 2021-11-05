@@ -66,7 +66,7 @@
                             <div class="icon">
                                 <i class="fas fa-search"></i>
                                 <i class="fas fa-paperclip" @click="showAttached" >
-                                    <div class="attached">
+                                    <div class="attached" :class="attached">
                                         <img src="./assets/img/svgexport-28.svg"
                                             alt="">
                                         <img src="./assets/img/svgexport-29.svg"
@@ -142,7 +142,7 @@
                                     <div class="message_content"
                                         :class="message.status">
                                         <div class="messageInfo_Delete"
-                                            :class="menu">
+                                            v-if="menuCounter == i" :class="menu" >
                                             <div>Message info</div>
                                             <div @click="deleteMessage(i)">Delete
                                                 message</div>

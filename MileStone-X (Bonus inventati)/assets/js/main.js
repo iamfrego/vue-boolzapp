@@ -2,6 +2,8 @@ const app = new Vue({
     el: '#app',
     data: {
 
+        attached: "",
+
         activeContact: 0,
 
         messageText: "",
@@ -139,11 +141,11 @@ const app = new Vue({
 
         menuClicked(index) {
             console.log(index);
-            console.log(this.menuCounter);
             if (!this.clicked) {
                 this.clicked = true;
                 this.menu = "active";
                 this.menuCounter = index;
+                console.log(this.menuCounter);
 
             } else {
                 this.clicked = false;
@@ -156,7 +158,13 @@ const app = new Vue({
         },
 
         showAttached() {
-            console.log("show");
+            if (!this.clicked) {
+                this.clicked = true;
+                this.attached = "show_attached";
+            } else {
+                this.clicked = false;
+                this.attached = "";
+            }
         }
     }
 })

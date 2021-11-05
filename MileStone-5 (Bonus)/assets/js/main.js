@@ -7,6 +7,9 @@ const app = new Vue({
 
         searchInput: "",
 
+        last_seen: dayjs().format('H:mm'),
+
+
         newMessage: {
             date: '',
             text: '',
@@ -131,3 +134,5 @@ const app = new Vue({
         }
     }
 })
+
+
